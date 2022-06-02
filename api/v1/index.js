@@ -32,7 +32,7 @@ router.post("/getInfo/:id", async (req, res) => {
   };
   res.send(result);
 });
-router.post("/download/:id/:itag", (req, res) => {
+router.get("/download/:id/:itag", (req, res) => {
   const { id, itag } = req.params;
   const video = ytdl(id, {
     format: itag,
