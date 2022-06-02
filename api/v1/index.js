@@ -38,7 +38,6 @@ router.post("/download/:id/:itag", (req, res) => {
     format: itag,
     quality: "highest",
   });
-  res.setHeader("Content-disposition", "attachment");
   video.pipe(res);
 });
 
