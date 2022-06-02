@@ -5,7 +5,7 @@ const ytdl = require("ytdl-core");
 router.get("/", (req, res) => {
   res.send("Welcome to API V1");
 });
-router.get("/getInfo/:id", async (req, res) => {
+router.post("/getInfo/:id", async (req, res) => {
   const { id } = req.params;
   const info = await ytdl.getInfo(id);
   const result = {
